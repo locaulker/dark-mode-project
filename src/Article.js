@@ -7,7 +7,9 @@ const Article = ({ title, snippet, date, length }) => {
     <article className='post'>
       <h2>{title}</h2>
       <div className='post-info'>
-        <span>date</span>
+        <span>
+          <strong>Date:</strong> {moment(date).format('MMM Do, YYYY')}.
+        </span>
         <span>About {length} min to read</span>
       </div>
       <p>{snippet}</p>
